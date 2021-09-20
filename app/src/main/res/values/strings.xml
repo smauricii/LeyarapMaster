@@ -17,6 +17,10 @@
     <string name="txt_title_ejemplo">Selecciona la cantidad de ejercicios que quieres realizar hoy</string>
     <string name="txt_title_Pensamientos">Pensamientos</string>
     <string name="txt_buscar">Buscar</string>
+    <string name="txt_como_te_sientes">Como te sientes del 1 al 5</string>
+    <string name="txt_como_has_dormido">Como has dormido estos dias del 1 al 5</string>
+    <string name="txt__nivel_actividad_fisica">Nivel de actividad fisica del 1 al 5</string>
+
 
 
     <string name="txt_salud">Salud</string>

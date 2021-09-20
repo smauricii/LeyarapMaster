@@ -149,12 +149,23 @@ class LoginActicity : AppCompatActivity() {
 
     private fun mainHome(email: String) {
 
-        val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
+        val homeActivityIntent = Intent(this, EleccionActivity::class.java).apply {
             putExtra("email", email)
         }
         startActivity(homeActivityIntent)
 
     }
+    //funcion principal
+    /*private fun mainHome(email: String) {
+
+        val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
+            putExtra("email", email)
+        }
+        startActivity(homeActivityIntent)
+
+    }*/
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
