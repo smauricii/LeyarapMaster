@@ -22,6 +22,7 @@ class InicioActicity : AppCompatActivity(), View.OnClickListener {
 
         //sesionActiva()
         //iniciolayout.visibility = View.VISIBLE
+        //ola
         texto_inicio = findViewById(R.id.textoinicio)
         texto_inicio!!.typeface = Typeface.createFromAsset(assets, "fonts/lellaraptitle.otf")
 
