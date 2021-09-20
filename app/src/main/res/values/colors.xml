@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#F6D8C7</color>
+    <color name="colorAccent">#03DAC5</color>
+    <drawable name="fondo.jpg">
+
+    </drawable>
+</resources>

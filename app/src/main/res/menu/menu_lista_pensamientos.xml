@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/edit_item_pensamientos"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="@string/edit_item_pensamientos"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:id="@+id/delete_item_pensamientos"
+        app:showAsAction="ifRoom"
+        android:title="@string/delete_item_pensamientos" />
+</menu>
