@@ -13,14 +13,15 @@
         android:id="@+id/pregone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="76dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="@string/txt_como_te_sientes"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregone"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/pregtwo"
@@ -56,7 +57,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sliderpreg1"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sliderpreg2"
@@ -107,7 +108,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregthree"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintVertical_bias="0.15" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sliderpreg3"
+        app:srcCompat="@drawable/btn_next" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
