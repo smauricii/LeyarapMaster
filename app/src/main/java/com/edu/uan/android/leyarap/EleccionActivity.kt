@@ -1,13 +1,19 @@
 package com.edu.uan.android.leyarap
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.edu.uan.android.leyarap.pausas.PausasActivasActivity
+import com.edu.uan.android.leyarap.pensamientos.PensamientosActivity
 import com.edu.uan.android.leyarap.salud.CrearEventoSaludActivity
 import com.edu.uan.android.leyarap.salud.SaludActivity
+import com.github.mikephil.charting.utils.ColorTemplate
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_eleccion.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_salud.*
@@ -21,6 +27,15 @@ class EleccionActivity : AppCompatActivity() {
         pregone?.typeface = font
         pregtwo?.typeface = font
         pregthree?.typeface = font
+        txt_inicio?.typeface = font
+        txt_inicio?.setTextColor(Color.rgb(61, 165, 255))
+
+
+        val eleccion = mutableListOf(PausasActivasActivity::class.java,PensamientosActivity::class.java,SaludActivity::class.java)
+        txt_inicio.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
 
         btn_next.setOnClickListener {
             var suma = sliderpreg1.value + sliderpreg2.value + sliderpreg3.value
@@ -33,12 +48,12 @@ class EleccionActivity : AppCompatActivity() {
                 startActivity(intent)
                 Toast.makeText(this, "Te recomendamos realizar una pausa activa", Toast.LENGTH_SHORT).show()
             }else if(suma >10 && suma <=15){
-                val intent = Intent(this, InicioActicity::class.java)
+                val intent = Intent(this, eleccion.random())
                 startActivity(intent)
                 Toast.makeText(this, "Te recomendamos ir al inicio jaja", Toast.LENGTH_SHORT).show()
             }
         }
 
-
     }
+
 }

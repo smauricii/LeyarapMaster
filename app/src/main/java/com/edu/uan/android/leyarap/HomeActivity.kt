@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import com.edu.uan.android.leyarap.ejemplos.EstadoAnimoActivityCreadaEjemplo
 import com.edu.uan.android.leyarap.ejemplos.MeditacionActivityCreadaEjemplo
 import com.edu.uan.android.leyarap.ejemplos.MetasLogrosActivityCreadaEjemplo
+import com.edu.uan.android.leyarap.estadoAnimo.EstadoAnimo
 import com.edu.uan.android.leyarap.pausas.PausasActivasActivity
 import com.edu.uan.android.leyarap.pensamientos.PensamientosActivity
 import com.edu.uan.android.leyarap.salud.SaludActivity
@@ -48,7 +49,7 @@ class HomeActivity : AppCompatActivity() {
         }
         //estado de animo
         btn_estado_animo.setOnClickListener {
-            val intent = Intent(this, EstadoAnimoActivityCreadaEjemplo::class.java)
+            val intent = Intent(this, EstadoAnimo::class.java)
             startActivity(intent)
         }
         //metas y logros
