@@ -1,5 +1,6 @@
 package com.edu.uan.android.leyarap.estadoAnimo
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,19 +19,22 @@ class EstadoAnimo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estado_animo)
+        val datos: Intent = intent
+        val data = datos?.getFloatExtra("dataestado", 3f)
 
-        var barChart:BarChart? = findViewById(R.id.barchart)
+
+        var barChart: BarChart? = findViewById(R.id.barchart)
         var visitors = ArrayList<BarEntry>()
-        visitors.add(BarEntry(2014f,420f))
-        visitors.add(BarEntry(2015f,475f))
-        visitors.add(BarEntry(2016f,500f))
-        visitors.add(BarEntry(2017f,525f))
-        visitors.add(BarEntry(2018f,600f))
-        visitors.add(BarEntry(2019f,700f))
-        visitors.add(BarEntry(2020f,800f))
+        visitors.add(BarEntry(2014f, data))
+        visitors.add(BarEntry(2015f, data))
+        visitors.add(BarEntry(2016f, data))
+        visitors.add(BarEntry(2017f, data))
+        visitors.add(BarEntry(2018f, data))
+        visitors.add(BarEntry(2019f, data))
+        visitors.add(BarEntry(2020f, data))
 
 
-        var barDataSet = BarDataSet(visitors,"visitors")
+        var barDataSet = BarDataSet(visitors, "visitors")
         barDataSet.setColors(Color.rgb(61, 165, 255), Color.rgb(23, 197, 255));
         barDataSet.valueTextColor = Color.rgb(61, 165, 255);
         barDataSet.setValueTextSize(16f);
@@ -41,7 +45,6 @@ class EstadoAnimo : AppCompatActivity() {
         barChart?.data = barData
         barChart?.description?.text = "ejemplo de la datta"
         barChart?.animateY(2000)
-
 
     }
 /*    companion object{
