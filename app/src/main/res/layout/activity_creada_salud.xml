@@ -7,102 +7,27 @@
     android:paddingEnd="10dp"
     tools:context=".salud.ActivityCreadaSalud">
 
-    <LinearLayout
-        android:id="@+id/linearLayout17"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/txt_title_salud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/chistesactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/txt_title_salud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:textSize="36sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/btn_audio"
-                android:layout_width="399dp"
-                android:layout_height="62dp"
-                android:layout_marginLeft="6dp"
-                app:srcCompat="@drawable/flores5" />
-
-            <ImageButton
-                android:id="@+id/btn_audio2"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/flores6" />
-
-            <ImageButton
-                android:id="@+id/btn_audio3"
-                android:layout_width="430dp"
-                android:layout_height="94dp"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="#00FFFFFF"
-                android:paddingEnd="30dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/imagen_fondo1" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout18"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/title_salud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="135dp"
-            android:gravity="center_horizontal"
-            android:text="Audio Relajante"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/title_salud2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:gravity="center_horizontal"
-            android:text="Audio Relajante"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/title_salud3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:gravity="center_horizontal"
-            android:text="Audio Relajante"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_salud"
+        app:layout_constraintVertical_bias="0.403" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

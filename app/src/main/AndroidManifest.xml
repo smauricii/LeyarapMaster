@@ -13,8 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".estadoAnimo.EstadoAnimo"
+        <activity
+            android:name=".actividadespasatiempos.Bromas"
+            android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".estadoAnimo.EstadoAnimo"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EleccionActivity"
             android:theme="@style/AppTheme.NoActionBar" />

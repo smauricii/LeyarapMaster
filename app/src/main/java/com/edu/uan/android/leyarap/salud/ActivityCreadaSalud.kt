@@ -19,6 +19,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.edu.uan.android.leyarap.R
+import com.edu.uan.android.leyarap.actividadespasatiempos.Bromas
 import com.edu.uan.android.leyarap.clases.ListaSalud
 import com.edu.uan.android.leyarap.database.AppDatabaseSalud
 import kotlinx.android.synthetic.main.activity_creada_salud.*
@@ -38,9 +39,9 @@ class ActivityCreadaSalud : AppCompatActivity() {
         txt_title_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
         txt_title_salud.setTextColor(Color.WHITE)
 
-        title_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
-        title_salud.setTextColor(Color.WHITE)
-
+        //title_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
+        //title_salud.setTextColor(Color.WHITE)
+        //No tocar, CRUD
         val idlista = intent.getIntExtra("id", 0)
         database = AppDatabaseSalud.getDatabase(this)
 
@@ -50,27 +51,22 @@ class ActivityCreadaSalud : AppCompatActivity() {
             listaItemSalud = it
             txt_title_salud.text = listaItemSalud.titulo
         })
+        //////////////////////////////////////////////////////////
 
-        btn_audio.setOnClickListener {
-            sonido()
+        chistesactivity.setOnClickListener {
+            val intent = Intent(this, Bromas::class.java)
 
-        }
-        btn_audio2.setOnClickListener {
-            sonido2()
-        }
-        btn_audio3.setOnClickListener {
-            sonido3()
+            startActivity(intent)
         }
 
     }
-
+    //no tocar, CRUD
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_lista_salud, menu)
 
-
         return super.onCreateOptionsMenu(menu)
     }
-
+    //no tocar, CRUD
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
@@ -100,41 +96,7 @@ class ActivityCreadaSalud : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-    private fun sonido() {
-
-        val mp = MediaPlayer.create(this, R.raw.relajante)
-        //val pn = MediaPlayer.create(this, R.raw.pruebam2)
-        //mp.setAudioAttributes(AudioAttributes.Builder())
-
-        mp.start()
-        fun pausa(){
-            if (mp!=null && mp.isPlaying){
-                mp.currentPosition
-                mp.pause()
-            }
-        }
-
-    }
-    private fun sonido2() {
-
-
-        val pn = MediaPlayer.create(this, R.raw.relajante)
-        //mp.setAudioAttributes(AudioAttributes.Builder())
-
-        pn.start()
-
-    }
-    private fun sonido3() {
-
-
-        val pn = MediaPlayer.create(this, R.raw.relajante)
-        //mp.setAudioAttributes(AudioAttributes.Builder())
-
-        pn.start()
-
-    }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     override fun attachBaseContext(newBase: Context) {

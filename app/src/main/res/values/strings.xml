@@ -22,7 +22,7 @@
     <string name="txt__nivel_actividad_fisica">¿como calificarras el nivel de satisfaccion de las actividades realizadas ultimamente?</string>
     <string name="txt_inicio">Ir al inicio</string>
     <string name="txt_estadoAnimo">Estado De Animo</string>
-    <string name="txt_salud">Salud</string>
+    <string name="txt_salud">Pasatiempos</string>
 
     <string name="prefs_file">com.edu.uan.android.leyarap.PREFERENCE_FILE_KEY</string>
     <string name="title_activity_encuesta">EncuestaActivity</string>
@@ -33,4 +33,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="delete_item_pensamientos">delete_item_pensamientos</string>
     <string name="edit_item_pensamientos">edit_item_pensamientos</string>
+
+    <!-- chistes-->
+    <string name="txt_chiste1">Ya tenemos su diagnóstico. Usted tiene la enfermedad de Kengsinton, ¿Es grave doctor?, No lo sabemos señor Kengsinton</string>
+    <string name="txt_chiste2">¡Soldado López!. ¡Sí mi capitán!. No lo vi ayer en la prueba de camuflaje.¡Gracias mi capitán!</string>
+    <string name="txt_chiste3">¿Cómo se llama el campeón de buceo japonés?. Tokofondo. ¿Y el subcampeón?. Kasitoko.</string>
+    <string name="txt_chiste4">¿Cómo se llama el campeón de buceo japonés?. Tokofondo. ¿Y el subcampeón?. Kasitoko.</string>
+    <string name="txt_chiste5">¿Cómo se llama el campeón de buceo japonés?. Tokofondo. ¿Y el subcampeón?. Kasitoko.</string>
+
 </resources>
