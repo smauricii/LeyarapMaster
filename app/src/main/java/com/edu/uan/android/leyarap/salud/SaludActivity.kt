@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.lifecycle.Observer
 import com.edu.uan.android.leyarap.R
 import com.edu.uan.android.leyarap.adapters.ListaAdapterSalud
@@ -16,7 +17,7 @@ class SaludActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_salud)
-
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         txt_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
         txt_salud.setTextColor(Color.WHITE)
 

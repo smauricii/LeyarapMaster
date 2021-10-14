@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
-                app:srcCompat="@drawable/salud" />
+                app:srcCompat="@drawable/pasatiempos" />
 
             <ImageButton
                 android:id="@+id/btn_pensamientos"
@@ -78,20 +78,20 @@
                 app:srcCompat="@drawable/pensamientos" />
 
             <ImageButton
+                android:id="@+id/btn_estado_animo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:visibility="visible"
+                app:srcCompat="@drawable/estado_animo" />
+
+            <ImageButton
                 android:id="@+id/btn_meditacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 android:visibility="invisible"
                 app:srcCompat="@drawable/meditacion" />
-
-            <ImageButton
-                android:id="@+id/btn_estado_animo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
-                android:visibility="invisible"
-                app:srcCompat="@drawable/estado_animo" />
 
             <ImageButton
                 android:id="@+id/btn_metas_logros"

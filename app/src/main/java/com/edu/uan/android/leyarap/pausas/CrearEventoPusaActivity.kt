@@ -2,11 +2,15 @@ package com.edu.uan.android.leyarap.pausas
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.work.Data
 import androidx.work.WorkManager
 import com.edu.uan.android.leyarap.R
@@ -135,6 +139,14 @@ class CrearEventoPusaActivity : AppCompatActivity() {
 
         }
     }//fin on create
+
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(newBase)
+        val override = Configuration(newBase.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+    }
 
     private fun generateKey():String{
         return  UUID.randomUUID().toString()

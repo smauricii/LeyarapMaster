@@ -15,6 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.autenticacionlayout
@@ -55,7 +56,7 @@ class LoginActicity : AppCompatActivity() {
 
     }
 
-
+//cambio dev
     override fun onStart() {
         super.onStart()
         autenticacionlayout.visibility = View.VISIBLE
@@ -88,7 +89,6 @@ class LoginActicity : AppCompatActivity() {
                 }
             }
         }
-
         btn_ingresar.setOnClickListener {
             if (editCorreo.text.isNotEmpty() && editPassword.text.isNotEmpty()) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(
@@ -110,7 +110,7 @@ class LoginActicity : AppCompatActivity() {
             //configuracion
             val googleConf =
                 GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                    .requestIdToken(getString(R.string.default_web_client_id)).requestEmail()
+                    .requestIdToken(getString(R.string.txt_bienvenido)).requestEmail()
                     .build()
             val googleClient: GoogleSignInClient = GoogleSignIn.getClient(this, googleConf)
             googleClient.signOut()
@@ -149,12 +149,23 @@ class LoginActicity : AppCompatActivity() {
 
     private fun mainHome(email: String) {
 
-        val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
+        val homeActivityIntent = Intent(this, EleccionActivity::class.java).apply {
             putExtra("email", email)
         }
         startActivity(homeActivityIntent)
 
     }
+    //funcion principal
+    /*private fun mainHome(email: String) {
+
+        val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
+            putExtra("email", email)
+        }
+        startActivity(homeActivityIntent)
+
+    }*/
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
