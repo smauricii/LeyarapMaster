@@ -18,7 +18,7 @@ class Bromas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bromas)
         textEt.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
-        var eleccion_chiste = mutableListOf(R.string.txt_chiste1,R.string.txt_chiste2,R.string.txt_chiste3)
+        var chisteRandom = mutableListOf(R.string.txt_chiste1,R.string.txt_chiste2,R.string.txt_chiste3,R.string.txt_chiste4,R.string.txt_chiste5)
 
 
         mTTS = TextToSpeech(applicationContext, TextToSpeech.OnInitListener { status ->
@@ -28,7 +28,7 @@ class Bromas : AppCompatActivity() {
         })
 
         speakBtn.setOnClickListener {
-            textEt.setText(eleccion_chiste.random())
+            textEt.setText(chisteRandom.random())
             val toSpeack = textEt.text.toString()
             if (toSpeack == ""){
                 Toast.makeText(this, "NO HAY TEXTO PARA LEER", Toast.LENGTH_SHORT).show()
