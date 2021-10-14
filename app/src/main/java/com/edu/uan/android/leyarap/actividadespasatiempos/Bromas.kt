@@ -28,7 +28,7 @@ class Bromas : AppCompatActivity() {
         })
 
         speakBtn.setOnClickListener {
-            textEt.setText(chisteRandom.random())
+            textEt.setText(chisteRandom.random())//
             val toSpeack = textEt.text.toString()
             if (toSpeack == ""){
                 Toast.makeText(this, "NO HAY TEXTO PARA LEER", Toast.LENGTH_SHORT).show()
