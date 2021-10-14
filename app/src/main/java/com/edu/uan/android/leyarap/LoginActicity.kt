@@ -88,7 +88,6 @@ class LoginActicity : AppCompatActivity() {
                 }
             }
         }
-//cambios hola
         btn_ingresar.setOnClickListener {
             if (editCorreo.text.isNotEmpty() && editPassword.text.isNotEmpty()) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(
