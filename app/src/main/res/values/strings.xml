@@ -21,7 +21,7 @@
     <string name="txt_como_has_dormido">Como has dormido estos dias del 1 al 5</string>
     <string name="txt__nivel_actividad_fisica">¿como calificarras el nivel de satisfaccion de las actividades realizadas ultimamente?</string>
     <string name="txt_inicio">Ir al inicio</string>
-
+    <string name="txt_estadoAnimo">Estado De Animo</string>
     <string name="txt_salud">Salud</string>
 
     <string name="prefs_file">com.edu.uan.android.leyarap.PREFERENCE_FILE_KEY</string>

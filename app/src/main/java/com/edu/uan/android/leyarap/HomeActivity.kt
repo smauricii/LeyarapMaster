@@ -16,6 +16,7 @@ import com.edu.uan.android.leyarap.pausas.PausasActivasActivity
 import com.edu.uan.android.leyarap.pensamientos.PensamientosActivity
 import com.edu.uan.android.leyarap.salud.SaludActivity
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_eleccion.*
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -24,20 +25,14 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        val font = Typeface.createFromAsset(assets, "fonts/texto_letras.ttf")
-        txt_bienvenido?.setTypeface(font)
-        emailtxt?.setTypeface(font)
-
-        //setup PARA GUARDAR LOS DATOS QUE TENEMOS
         val bundle = intent.extras
         val email = bundle?.getString("email")
-        setup(email ?:"")
 
-        //GUARDAR LOS DATOS QUE TENEMOS
-        val pref = getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
-        pref.putString("email",email)
-        pref.apply()
+
+        val font = Typeface.createFromAsset(assets, "fonts/texto_letras.ttf")
+        txt_bienvenido?.typeface = font
+        emailtxt?.typeface = font
+        emailtxt.text = email
 
         btn_pausas_act.setOnClickListener{pausasActivasAct()}
         btn_salud_act.setOnClickListener { salud() }
@@ -64,21 +59,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    private fun setup(email:String){
-        title ="Inicio"
-        emailtxt.text ="${email}"
-        //boton salir y guardado de preferencias
-        btn_salir.setOnClickListener {
 
-            val pref = getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
-            pref.clear()
-            pref.apply()
-            FirebaseAuth.getInstance().signOut()
-            onBackPressed()
-        }
-
-
-    }
     @RequiresApi(api = Build.VERSION_CODES.P)
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(newBase)
@@ -97,4 +78,5 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, SaludActivity::class.java)
         startActivity(intent)
     }
+
 }

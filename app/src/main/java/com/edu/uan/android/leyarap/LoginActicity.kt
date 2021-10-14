@@ -15,6 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.autenticacionlayout
@@ -109,7 +110,7 @@ class LoginActicity : AppCompatActivity() {
             //configuracion
             val googleConf =
                 GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                    .requestIdToken(getString(R.string.default_web_client_id)).requestEmail()
+                    .requestIdToken(getString(R.string.txt_bienvenido)).requestEmail()
                     .build()
             val googleClient: GoogleSignInClient = GoogleSignIn.getClient(this, googleConf)
             googleClient.signOut()

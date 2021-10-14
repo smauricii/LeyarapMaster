@@ -13,7 +13,7 @@
         android:id="@+id/pregone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="112dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="@string/txt_como_te_sientes"
@@ -40,7 +40,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregone"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/pregtwo"
@@ -108,18 +109,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregthree"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.245" />
 
     <ImageButton
         android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="101dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sliderpreg3"
-        app:srcCompat="@drawable/btn_next" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/next_btn" />
 
     <TextView
         android:id="@+id/txt_inicio"
@@ -130,6 +133,29 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_next"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sliderpreg3" />
+
+    <TextView
+        android:id="@+id/emailuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pregone"
+        app:layout_constraintEnd_toStartOf="@+id/salirbtn"
+        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <ImageView
+        android:id="@+id/salirbtn"
+        android:layout_width="66dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/pregone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166"
+        app:srcCompat="@drawable/btn_salida" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

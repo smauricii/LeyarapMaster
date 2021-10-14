@@ -2,6 +2,7 @@ package com.edu.uan.android.leyarap.estadoAnimo
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,6 +13,19 @@ import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.utils.ColorTemplate
 import kotlinx.android.synthetic.main.activity_estado_animo.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.*
+import kotlin.collections.ArrayList
+import com.github.mikephil.charting.data.BarData
+
+import com.github.mikephil.charting.data.BarDataSet
+
+import com.github.mikephil.charting.data.BarEntry
+
+
+
 
 
 class EstadoAnimo : AppCompatActivity() {
@@ -19,13 +33,14 @@ class EstadoAnimo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estado_animo)
+        val font = Typeface.createFromAsset(assets, "fonts/moon.otf")
         val datos: Intent = intent
         val data = datos?.getFloatExtra("dataestado", 3f)
-
+        txt_estadoAnimo.typeface = font
 
         var barChart: BarChart? = findViewById(R.id.barchart)
         var visitors = ArrayList<BarEntry>()
-        visitors.add(BarEntry(2014f, data))
+        visitors.add(BarEntry(2016f, data))
         visitors.add(BarEntry(2015f, data))
         visitors.add(BarEntry(2016f, data))
         visitors.add(BarEntry(2017f, data))
@@ -47,6 +62,8 @@ class EstadoAnimo : AppCompatActivity() {
         barChart?.animateY(2000)
 
     }
+
+
 /*    companion object{
         private const val CHART_label = "DAY_CHART"
     }

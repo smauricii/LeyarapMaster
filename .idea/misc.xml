@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/drawable/btn_salida.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/drawable/next_btn.xml" value="0.2703125" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity__pausa_creada.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_creada_salud.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_crear_evento_salud.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_eleccion.xml" value="0.264" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_estado_animo.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_home.xml" value="0.21240942028985507" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_inicio.xml" value="0.25" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_login.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_pausas_activas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_pensamientos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sebas/AndroidStudioProjects/LeyarapMaster/app/src/main/res/layout/activity_salud.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
