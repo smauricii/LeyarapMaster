@@ -55,7 +55,7 @@ class LoginActicity : AppCompatActivity() {
 
     }
 
-
+//cambio dev
     override fun onStart() {
         super.onStart()
         autenticacionlayout.visibility = View.VISIBLE
