@@ -20,6 +20,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.edu.uan.android.leyarap.R
 import com.edu.uan.android.leyarap.actividadespasatiempos.Bromas
+import com.edu.uan.android.leyarap.actividadespasatiempos.Consejos
 import com.edu.uan.android.leyarap.clases.ListaSalud
 import com.edu.uan.android.leyarap.database.AppDatabaseSalud
 import kotlinx.android.synthetic.main.activity_creada_salud.*
@@ -38,6 +39,7 @@ class ActivityCreadaSalud : AppCompatActivity() {
 
         txt_title_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
         txt_title_salud.setTextColor(Color.WHITE)
+        txt_bromas.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
 
         //title_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
         //title_salud.setTextColor(Color.WHITE)
@@ -55,6 +57,11 @@ class ActivityCreadaSalud : AppCompatActivity() {
 
         chistesactivity.setOnClickListener {
             val intent = Intent(this, Bromas::class.java)
+
+            startActivity(intent)
+        }
+        btn_consejos.setOnClickListener {
+            val intent = Intent(this, Consejos::class.java)
 
             startActivity(intent)
         }

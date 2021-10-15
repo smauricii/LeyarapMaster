@@ -33,6 +33,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="delete_item_pensamientos">delete_item_pensamientos</string>
     <string name="edit_item_pensamientos">edit_item_pensamientos</string>
+    <string name="txt_broma">Bromas</string>
+    <string name="txt_consejo">Consejos</string>
 
     <!-- chistes-->
     <string name="txt_chiste1">Ya tenemos su diagnóstico. Usted tiene la enfermedad de Kengsinton, ¿Es grave doctor?, No lo sabemos señor Kengsinton</string>
@@ -40,5 +42,15 @@
     <string name="txt_chiste3">¿Cómo se llama el campeón de buceo japonés?. Tokofondo. ¿Y el subcampeón?. Kasitoko.</string>
     <string name="txt_chiste4">.¿Cuanto cuesta esta estufa?, 5000 dolares, Pero, oiga, esto es una estafa, No señor, es una estufa.</string>
     <string name="txt_chiste5">¿Cómo se dice escoba voladora en japonés?, Simekaigo Memato.</string>
+
+    <!-- consejos-->
+    <string name="txt_consejo1">Reconozca las cosas que no puede cambiar: Aceptar que no puede cambiar ciertas cosas le permite dejarlas ir y no alterarse. Por ejemplo, no puede cambiar el hecho de que debe conducir durante la hora pico. Pero puede buscar maneras de relajarse en el trayecto, como escuchar un podcast o un audiolibro.</string>
+    <string name="txt_consejo2">Evite las situaciones estresantes: Siempre que le sea posible, aléjese de la fuente del estrés. Por ejemplo, si su familia discute en los días festivos, dese un descanso y salga a caminar o a dar una vuelta en el auto.</string>
+    <string name="txt_consejo3">Cambie su perspectiva: Intente desarrollar una actitud más positiva ante los desafíos. Puede hacerlo reemplazando los pensamientos negativos con pensamientos más positivos. Por ejemplo, en lugar de pensar, "¿por qué siempre todo sale mal?", cambie esa idea por, "puedo encontrar una manera de superar esto". Puede parecer difícil o tonto en un principio, pero podría descubrir que esto le ayuda a dar un giro a su perspectiva.</string>
+    <string name="txt_consejo4">Aprenda a decir que no.
+        Si su estrés viene de realizar demasiadas tareas en casa o en el trabajo, aprenda a establecer límites. Pida ayuda a los demás cuando la necesite.</string>
+    <string name="txt_consejo5">¿Cómo se dice escoba voladora en japonés?, Simekaigo Memato.</string>
+
+
 
 </resources>
