@@ -14,6 +14,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.LiveData
@@ -36,6 +37,7 @@ class ActivityCreadaSalud : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creada_salud)
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         txt_title_salud.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
         txt_title_salud.setTextColor(Color.WHITE)
