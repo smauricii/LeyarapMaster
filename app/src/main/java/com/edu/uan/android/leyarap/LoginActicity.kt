@@ -2,12 +2,16 @@ package com.edu.uan.android.leyarap
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -35,6 +39,7 @@ class LoginActicity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         texto_arriba = findViewById(R.id.textarriba)
         texto_arriba!!.typeface = Typeface.createFromAsset(assets, "fonts/texto_letras.ttf")
 
@@ -54,6 +59,14 @@ class LoginActicity : AppCompatActivity() {
         registroEIngreso()
         sesionActiva()
 
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(newBase)
+        val override = Configuration(newBase.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
     }
 
 //cambio dev
