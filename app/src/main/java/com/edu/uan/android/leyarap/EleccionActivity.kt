@@ -71,6 +71,7 @@ class EleccionActivity : AppCompatActivity() {
         }
 
     }
+    //cambios
     private fun setup(email:String){
         title ="Inicio"
         emailuser.text ="${email}"
