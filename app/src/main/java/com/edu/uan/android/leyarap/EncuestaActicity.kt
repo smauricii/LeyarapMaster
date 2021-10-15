@@ -1,13 +1,13 @@
 package com.edu.uan.android.leyarap
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.edu.uan.android.leyarap.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_encuesta.*
 
 class EncuestaActicity : AppCompatActivity() {
+
     private val adapter by lazy { ViewPagerAdapter(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
-            android:text="@string/txt_bienvenido"
+            android:text="Bienvenido"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
