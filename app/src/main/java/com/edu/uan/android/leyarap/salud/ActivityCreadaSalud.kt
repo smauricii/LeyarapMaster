@@ -22,6 +22,7 @@ import androidx.lifecycle.Observer
 import com.edu.uan.android.leyarap.R
 import com.edu.uan.android.leyarap.actividadespasatiempos.Bromas
 import com.edu.uan.android.leyarap.actividadespasatiempos.Consejos
+import com.edu.uan.android.leyarap.actividadespasatiempos.concentracion
 import com.edu.uan.android.leyarap.clases.ListaSalud
 import com.edu.uan.android.leyarap.database.AppDatabaseSalud
 import kotlinx.android.synthetic.main.activity_creada_salud.*
@@ -64,6 +65,11 @@ class ActivityCreadaSalud : AppCompatActivity() {
         }
         btn_consejos.setOnClickListener {
             val intent = Intent(this, Consejos::class.java)
+
+            startActivity(intent)
+        }
+        btn_concentracion.setOnClickListener {
+            val intent = Intent(this, concentracion::class.java)
 
             startActivity(intent)
         }

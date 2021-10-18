@@ -76,4 +76,31 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_consejos"
         app:layout_constraintVertical_bias="0.039" />
 
+    <ImageButton
+        android:id="@+id/btn_concentracion"
+        android:layout_width="136dp"
+        android:layout_height="127dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="concentracion"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bromas"
+        app:layout_constraintVertical_bias="0.136"
+        app:srcCompat="@drawable/concentracion" />
+
+    <TextView
+        android:id="@+id/txt_concentracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_concentracion"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_concentracion"
+        app:layout_constraintVertical_bias="0.078" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
