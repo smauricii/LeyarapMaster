@@ -40,92 +40,38 @@ class EstadoAnimo : AppCompatActivity() {
         txt_estadoAnimo.typeface = font
         val bundle = intent.extras
         val email = bundle?.getString("email")
-        var dataMonday = 0.0.toLong();
-        var dataTuesday: Long;
+        var dataMonday: Long;
+        var dataTuesday: Double;
         var dataWednesday: Long;
-        var dataThursday: Long;
+        var dataThursday: Double;
         var dataFriday: Long;
         var dataSaturday: Long;
         var dataSunday: Long;
 
-        var barChart: BarChart? = findViewById(R.id.barchart)
-        var visitors = ArrayList<BarEntry>()
+
 
         db.collection("datosUsuario").document(email+"Monday").get().
         addOnSuccessListener {
             dataMonday= it.get("Animo") as Long
             if(dataMonday==null){
                 dataMonday=0;
-            }
+            var barChart: BarChart? = findViewById(R.id.barchart)
+            var visitors = ArrayList<BarEntry>()
             visitors.add(BarEntry(2016f, dataMonday.toFloat()))
+            var barDataSet = BarDataSet(visitors, "visitors")
+            barDataSet.setColors(Color.rgb(61, 165, 255), Color.rgb(23, 197, 255));
+            barDataSet.valueTextColor = Color.rgb(61, 165, 255);
+            barDataSet.setValueTextSize(16f);
+
+            var barData = BarData(barDataSet)
+
+            barChart?.setFitBars(true)
+            barChart?.data = barData
+            barChart?.description?.text = "ejemplo de la datta"
+            barChart?.animateY(2000)
+        }
         }
 
-        db.collection("datosUsuario").document(email+"Tuesday").get().
-        addOnSuccessListener {
-            dataTuesday=it.get("Animo") as Long
-            if(dataTuesday==null){
-                dataTuesday=0;
-            }
-            visitors.add(BarEntry(2015f, dataTuesday.toFloat()))
-        }
-
-        db.collection("datosUsuario").document(email+"Wednesday").get().
-        addOnSuccessListener {
-            dataWednesday=it.get("Animo") as Long
-            if(dataWednesday==null){
-                dataWednesday=0;
-            }
-            visitors.add(BarEntry(2016f, dataWednesday.toFloat()))
-        }
-
-        db.collection("datosUsuario").document(email+"Thursday").get().
-        addOnSuccessListener {
-            dataThursday=it.get("Animo") as Long
-            if(dataThursday==null){
-                dataThursday=0;
-            }
-            visitors.add(BarEntry(2017f, dataThursday.toFloat()))
-        }
-
-        db.collection("datosUsuario").document(email+"Friday").get().
-        addOnSuccessListener {
-            dataFriday=it.get("Animo") as Long
-            if(dataFriday==null){
-                dataFriday=0;
-            }
-            visitors.add(BarEntry(2018f, dataMonday.toFloat()))
-        }
-
-        db.collection("datosUsuario").document(email+"Saturday").get().
-        addOnSuccessListener {
-            dataSaturday=it.get("Animo") as Long
-            if(dataSaturday==null){
-                dataSaturday=0;
-            }
-            visitors.add(BarEntry(2019f, dataMonday.toFloat()))
-        }
-
-        db.collection("datosUsuario").document(email+"Sunday").get().
-        addOnSuccessListener {
-            dataSunday=it.get("Animo") as Long
-            if(dataSunday==null){
-                dataSunday=0;
-            }
-            visitors.add(BarEntry(2020f, dataMonday.toFloat()))
-        }
-
-
-        var barDataSet = BarDataSet(visitors, "visitors")
-        barDataSet.setColors(Color.rgb(61, 165, 255), Color.rgb(23, 197, 255));
-        barDataSet.valueTextColor = Color.rgb(61, 165, 255);
-        barDataSet.setValueTextSize(16f);
-
-        var barData = BarData(barDataSet)
-
-        barChart?.setFitBars(true)
-        barChart?.data = barData
-        barChart?.description?.text = "ejemplo de la datta"
-        barChart?.animateY(2000)
     }
 
 
