@@ -83,7 +83,7 @@ class EleccionActivity : AppCompatActivity() {
                 val intent = Intent(this, eleccionTriste.random())
                 //intent.putExtra("dataestado", data)
                 startActivity(intent)
-                Toast.makeText(this, "Te sientes triste :( recomendamos realizar esta actividad" + eleccionTriste.toString(), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Te sientes triste :( recomendamos realizar esta actividad", Toast.LENGTH_SHORT).show()
             }else if(suma >5 && suma  <=10){
                 val intent = Intent(this, eleccionNeutral.random())
                 //intent.putExtra("dataestado", data)
