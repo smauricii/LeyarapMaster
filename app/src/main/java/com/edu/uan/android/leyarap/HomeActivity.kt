@@ -45,6 +45,7 @@ class HomeActivity : AppCompatActivity() {
         //estado de animo
         btn_estado_animo.setOnClickListener {
             val intent = Intent(this, EstadoAnimo::class.java)
+            intent.putExtra("email", email);
             startActivity(intent)
         }
         //metas y logros

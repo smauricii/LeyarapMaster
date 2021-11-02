@@ -13,10 +13,14 @@ import com.edu.uan.android.leyarap.pausas.PausasActivasActivity
 import com.edu.uan.android.leyarap.pensamientos.PensamientosActivity
 import com.edu.uan.android.leyarap.salud.SaludActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_eleccion.*
 import kotlinx.android.synthetic.main.activity_home.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class EleccionActivity : AppCompatActivity() {
+    private val db = FirebaseFirestore.getInstance();
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eleccion)
@@ -38,7 +42,6 @@ class EleccionActivity : AppCompatActivity() {
         txt_inicio?.typeface = font
         txt_inicio?.setTextColor(Color.rgb(61, 165, 255))
 
-
         val eleccion = mutableListOf(PausasActivasActivity::class.java,PensamientosActivity::class.java,SaludActivity::class.java)
         txt_inicio.setOnClickListener {
             val data = sliderpreg1.value
@@ -49,6 +52,21 @@ class EleccionActivity : AppCompatActivity() {
         }
 
         btn_next.setOnClickListener {
+
+            val date = Date()
+            val c: Calendar = Calendar.getInstance()
+            c.setTime(date)
+            val day: String = SimpleDateFormat("EEEE").format(date)
+
+            if (email != null) {
+                db.collection("datosUsuario").document(email+day).set(
+                    hashMapOf("Animo" to sliderpreg1.value.toFloat(),
+                        "Satisfaccion" to sliderpreg2.value.toFloat(),
+                        "Suenio" to sliderpreg3.value.toFloat())
+                )
+
+            }
+
 
             var suma = sliderpreg1.value + sliderpreg2.value + sliderpreg3.value
             if (suma  <= 5) {
@@ -71,6 +89,7 @@ class EleccionActivity : AppCompatActivity() {
         }
 
     }
+    //cambios
     private fun setup(email:String){
         title ="Inicio"
         emailuser.text ="${email}"

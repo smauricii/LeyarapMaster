@@ -23,13 +23,14 @@ import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 
 import com.github.mikephil.charting.data.BarEntry
-
-
-
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.protobuf.Int64Value
+import kotlinx.android.synthetic.main.activity_eleccion.*
 
 
 class EstadoAnimo : AppCompatActivity() {
     //var barChart: BarChart? = null
+    private val db = FirebaseFirestore.getInstance();
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estado_animo)
@@ -37,16 +38,81 @@ class EstadoAnimo : AppCompatActivity() {
         val datos: Intent = intent
         val data = datos?.getFloatExtra("dataestado", 3f)
         txt_estadoAnimo.typeface = font
+        val bundle = intent.extras
+        val email = bundle?.getString("email")
+        var dataMonday = 0.0.toLong();
+        var dataTuesday: Long;
+        var dataWednesday: Long;
+        var dataThursday: Long;
+        var dataFriday: Long;
+        var dataSaturday: Long;
+        var dataSunday: Long;
 
         var barChart: BarChart? = findViewById(R.id.barchart)
         var visitors = ArrayList<BarEntry>()
-        visitors.add(BarEntry(2016f, data))
-        visitors.add(BarEntry(2015f, data))
-        visitors.add(BarEntry(2016f, data))
-        visitors.add(BarEntry(2017f, data))
-        visitors.add(BarEntry(2018f, data))
-        visitors.add(BarEntry(2019f, data))
-        visitors.add(BarEntry(2020f, data))
+
+        db.collection("datosUsuario").document(email+"Monday").get().
+        addOnSuccessListener {
+            dataMonday= it.get("Animo") as Long
+            if(dataMonday==null){
+                dataMonday=0;
+            }
+            visitors.add(BarEntry(2016f, dataMonday.toFloat()))
+        }
+
+        db.collection("datosUsuario").document(email+"Tuesday").get().
+        addOnSuccessListener {
+            dataTuesday=it.get("Animo") as Long
+            if(dataTuesday==null){
+                dataTuesday=0;
+            }
+            visitors.add(BarEntry(2015f, dataTuesday.toFloat()))
+        }
+
+        db.collection("datosUsuario").document(email+"Wednesday").get().
+        addOnSuccessListener {
+            dataWednesday=it.get("Animo") as Long
+            if(dataWednesday==null){
+                dataWednesday=0;
+            }
+            visitors.add(BarEntry(2016f, dataWednesday.toFloat()))
+        }
+
+        db.collection("datosUsuario").document(email+"Thursday").get().
+        addOnSuccessListener {
+            dataThursday=it.get("Animo") as Long
+            if(dataThursday==null){
+                dataThursday=0;
+            }
+            visitors.add(BarEntry(2017f, dataThursday.toFloat()))
+        }
+
+        db.collection("datosUsuario").document(email+"Friday").get().
+        addOnSuccessListener {
+            dataFriday=it.get("Animo") as Long
+            if(dataFriday==null){
+                dataFriday=0;
+            }
+            visitors.add(BarEntry(2018f, dataMonday.toFloat()))
+        }
+
+        db.collection("datosUsuario").document(email+"Saturday").get().
+        addOnSuccessListener {
+            dataSaturday=it.get("Animo") as Long
+            if(dataSaturday==null){
+                dataSaturday=0;
+            }
+            visitors.add(BarEntry(2019f, dataMonday.toFloat()))
+        }
+
+        db.collection("datosUsuario").document(email+"Sunday").get().
+        addOnSuccessListener {
+            dataSunday=it.get("Animo") as Long
+            if(dataSunday==null){
+                dataSunday=0;
+            }
+            visitors.add(BarEntry(2020f, dataMonday.toFloat()))
+        }
 
 
         var barDataSet = BarDataSet(visitors, "visitors")
@@ -60,7 +126,6 @@ class EstadoAnimo : AppCompatActivity() {
         barChart?.data = barData
         barChart?.description?.text = "ejemplo de la datta"
         barChart?.animateY(2000)
-
     }
 
 
