@@ -1,5 +1,6 @@
 package com.edu.uan.android.leyarap
 
+import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
@@ -56,6 +57,9 @@ class HomeActivity : AppCompatActivity() {
         btn_pensamientos.setOnClickListener {
             val intent = Intent(this, PensamientosActivity::class.java)
             startActivity(intent)
+        }
+        btn_salir.setOnClickListener{
+            HomeActivity().finish()
         }
     }
 

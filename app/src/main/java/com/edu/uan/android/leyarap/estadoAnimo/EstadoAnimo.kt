@@ -24,10 +24,6 @@ import com.github.mikephil.charting.data.BarDataSet
 
 import com.github.mikephil.charting.data.BarEntry
 
-
-
-
-
 class EstadoAnimo : AppCompatActivity() {
     //var barChart: BarChart? = null
     override fun onCreate(savedInstanceState: Bundle?) {

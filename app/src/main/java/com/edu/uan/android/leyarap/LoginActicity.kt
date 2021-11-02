@@ -22,15 +22,10 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.autenticacionlayout
-import kotlinx.android.synthetic.main.activity_login.btn_google
 import kotlinx.android.synthetic.main.activity_login.editCorreo
 import kotlinx.android.synthetic.main.activity_login.editPassword
 import android.app.Activity
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-
-
-
-
 
 class LoginActicity : AppCompatActivity() {
 
@@ -53,12 +48,12 @@ class LoginActicity : AppCompatActivity() {
         //botones
 
         //facebook
-        btnfacebook = findViewById(R.id.btn_facebook)
+
         val font = Typeface.createFromAsset(assets, "fonts/texto_letras.ttf")
         btnfacebook?.setTypeface(font)
 
         //google
-        btngoogle = findViewById(R.id.btn_google)
+
         btngoogle?.setTypeface(font)
 
         //registrarme y acceder
@@ -125,7 +120,7 @@ class LoginActicity : AppCompatActivity() {
             }
         }
         //google en registrar
-        btn_google.setOnClickListener {
+/*        btn_google.setOnClickListener {
             //configuracion
             val googleConf =
                 GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -136,7 +131,7 @@ class LoginActicity : AppCompatActivity() {
             //startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
             getGoogleDataBack.launch(googleClient.signInIntent)
 
-        }
+        }*/
     }
 
     private fun alertaError() {

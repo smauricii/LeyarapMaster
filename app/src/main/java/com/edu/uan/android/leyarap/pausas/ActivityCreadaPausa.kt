@@ -1,13 +1,18 @@
 package com.edu.uan.android.leyarap.pausas
 
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -27,6 +32,7 @@ class ActivityCreadaPausa : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity__pausa_creada)
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
 
         txt_title_lista.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
@@ -95,5 +101,12 @@ class ActivityCreadaPausa : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(newBase)
+        val override = Configuration(newBase.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
     }
 }

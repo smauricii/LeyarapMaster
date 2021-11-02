@@ -7,6 +7,7 @@ import android.graphics.Typeface
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.annotation.RequiresApi
 import com.edu.uan.android.leyarap.R
 import com.edu.uan.android.leyarap.clases.ListaPensamientos
@@ -20,6 +21,7 @@ class CrearEventoPensmientosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_evento_pensmientos)
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         var idPensamientos: Int? = null
 

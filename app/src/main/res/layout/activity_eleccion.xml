@@ -35,12 +35,10 @@
         android:value="0"
         android:valueFrom="0"
         android:valueTo="5"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregone"
-        app:layout_constraintVertical_bias="0.05"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -53,17 +51,16 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sliderpreg1"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintTop_toBottomOf="@+id/sliderpreg1" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sliderpreg2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="1"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:stepSize="1"
@@ -75,64 +72,69 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pregtwo"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintVertical_bias="0.507"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/pregthree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="@string/txt__nivel_actividad_fisica"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pregtwo"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintTop_toBottomOf="@+id/pregtwo" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/sliderpreg3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="1"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:stepSize="1"
         android:value="0"
         android:valueFrom="0"
         android:valueTo="5"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pregthree"
-        app:layout_constraintVertical_bias="0.245" />
+        app:layout_constraintTop_toBottomOf="@+id/pregthree" />
 
     <ImageButton
         android:id="@+id/btn_next"
         android:layout_width="64dp"
         android:layout_height="101dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sliderpreg3"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/next_btn" />
 
     <TextView
         android:id="@+id/txt_inicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="145dp"
+        android:layout_height="67dp"
+        android:gravity="center"
         android:text="@string/txt_inicio"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_next"
+        app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sliderpreg3" />
+        app:layout_constraintTop_toBottomOf="@+id/sliderpreg3"
+        app:layout_constraintVertical_bias="0.505" />
 
     <TextView
         android:id="@+id/emailuser"
@@ -141,10 +143,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/pregone"
         app:layout_constraintEnd_toStartOf="@+id/salirbtn"
-        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintHorizontal_bias="0.601"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
+        app:layout_constraintVertical_bias="0.494" />
 
     <ImageView
         android:id="@+id/salirbtn"

@@ -7,66 +7,59 @@
     android:background="@drawable/fondo"
     tools:context=".pausas.PausasActivasActivity">
 
-    <LinearLayout
-
-
-        android:id="@+id/linearLayout6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/edit_buscar"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_buscar"
+        android:contentDescription="2"
+        android:drawableRight="@drawable/ic_buscar"
+        android:ems="10"
+        android:hint="@string/txt_buscar"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/edit_buscar"
-            android:layout_width="350dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/edit_buscar"
-            android:drawableRight="@drawable/ic_buscar"
-            android:ems="10"
-            android:hint="@string/txt_buscar"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"/>
+    <TextView
+        android:id="@+id/txt_pausa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/txt_title_pausas_act"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_buscar" />
 
-        <TextView
-            android:id="@+id/txt_pausa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/txt_title_pausas_act"
-            android:textSize="30sp" />
+    <ListView
+        android:id="@+id/lista_pausas"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_buscar"
+        app:layout_constraintVertical_bias="1.0">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <ListView
-                android:id="@+id/lista_pausas"
-                android:layout_width="match_parent"
-                android:layout_height="610dp" >
-
-            </ListView>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </ListView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_crearlista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="550dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
+        android:contentDescription="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_add_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

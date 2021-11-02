@@ -16,13 +16,19 @@ import com.edu.uan.android.leyarap.pausas.PausasActivasActivity
 import com.edu.uan.android.leyarap.pensamientos.PensamientosActivity
 import com.edu.uan.android.leyarap.salud.SaludActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_eleccion.*
 import kotlinx.android.synthetic.main.activity_home.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class EleccionActivity : AppCompatActivity() {
+    //implementacion Firebase
+    private val db = FirebaseFirestore.getInstance();
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eleccion)
+
 
         //setup PARA GUARDAR LOS DATOS QUE TENEMOS
         val bundle = intent.extras
@@ -55,12 +61,29 @@ class EleccionActivity : AppCompatActivity() {
             //elegir todas las clases finales donde se an a dirigir las actividades
         btn_next.setOnClickListener {
 
+            ////////////////
+            val date = Date()
+            val c: Calendar = Calendar.getInstance()
+            c.setTime(date)
+            val day: String = SimpleDateFormat("EEEE").format(date)
+
+            if (email != null) {
+                db.collection("datosUsuario").document(email+day).set(
+                    hashMapOf("Animo" to sliderpreg1.value.toFloat(),
+                        "Satisfaccion" to sliderpreg2.value.toFloat(),
+                        "Suenio" to sliderpreg3.value.toFloat())
+                )
+
+
+            }
+
+            /////////
             var suma = sliderpreg1.value + sliderpreg2.value + sliderpreg3.value
             if (suma  <= 5) {
                 val intent = Intent(this, eleccionTriste.random())
                 //intent.putExtra("dataestado", data)
                 startActivity(intent)
-                Toast.makeText(this, "Te sientes triste :( recomendamos realizar esta actividad", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Te sientes triste :( recomendamos realizar esta actividad" + eleccionTriste.toString(), Toast.LENGTH_SHORT).show()
             }else if(suma >5 && suma  <=10){
                 val intent = Intent(this, eleccionNeutral.random())
                 //intent.putExtra("dataestado", data)

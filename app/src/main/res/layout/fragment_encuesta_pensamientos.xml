@@ -6,44 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".fragments.FragmentEncuestaPensamientos">
 
-    <LinearLayout
-        android:id="@+id/linearLayout13"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="bottom"
-        android:orientation="vertical"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout16"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout16"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlCompat">
-
-        <ImageButton
-            android:id="@+id/btnContinuarP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:backgroundTint="#00FFFFFF"
-            android:src="@drawable/btn_continuar" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout16"
+    <TextView
+        android:id="@+id/title6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/title6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="80sp" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/parrafo6"
@@ -54,8 +25,22 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title6"
+        app:layout_constraintVertical_bias="0.312"
         tools:text="DemoText" />
+
+    <ImageButton
+        android:id="@+id/btnContinuarP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="continuar"
+        android:src="@drawable/btn_continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parrafo6"
+        app:layout_constraintVertical_bias="0.518"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
