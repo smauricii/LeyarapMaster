@@ -28,7 +28,6 @@ class HomeActivity : AppCompatActivity() {
         val bundle = intent.extras
         val email = bundle?.getString("email")
 
-
         val font = Typeface.createFromAsset(assets, "fonts/texto_letras.ttf")
         txt_bienvenido?.typeface = font
         emailtxt?.typeface = font
@@ -78,5 +77,6 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, SaludActivity::class.java)
         startActivity(intent)
     }
+
 
 }

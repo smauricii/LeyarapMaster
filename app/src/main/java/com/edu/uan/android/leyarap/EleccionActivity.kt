@@ -8,6 +8,9 @@ import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.edu.uan.android.leyarap.actividadespasatiempos.Bromas
+import com.edu.uan.android.leyarap.actividadespasatiempos.Consejos
+import com.edu.uan.android.leyarap.actividadespasatiempos.concentracion
 import com.edu.uan.android.leyarap.estadoAnimo.EstadoAnimo
 import com.edu.uan.android.leyarap.pausas.PausasActivasActivity
 import com.edu.uan.android.leyarap.pensamientos.PensamientosActivity
@@ -39,7 +42,9 @@ class EleccionActivity : AppCompatActivity() {
         txt_inicio?.setTextColor(Color.rgb(61, 165, 255))
 
 
-        val eleccion = mutableListOf(PausasActivasActivity::class.java,PensamientosActivity::class.java,SaludActivity::class.java)
+        val eleccionTriste = mutableListOf(Bromas::class.java,Consejos::class.java,SaludActivity::class.java)
+        val eleccionNeutral = mutableListOf(PausasActivasActivity::class.java)
+        val eleccionAlegre = mutableListOf(concentracion::class.java,PensamientosActivity::class.java)
         txt_inicio.setOnClickListener {
             val data = sliderpreg1.value
             //val intent = Intent(this, EstadoAnimo::class.java)
@@ -47,26 +52,26 @@ class EleccionActivity : AppCompatActivity() {
             intent.putExtra("email", email)
             startActivity(intent)
         }
-//elegir todas las clases finales donde se an a dirigir las actividades
+            //elegir todas las clases finales donde se an a dirigir las actividades
         btn_next.setOnClickListener {
 
             var suma = sliderpreg1.value + sliderpreg2.value + sliderpreg3.value
             if (suma  <= 5) {
-                val intent = Intent(this, SaludActivity::class.java)
+                val intent = Intent(this, eleccionTriste.random())
                 //intent.putExtra("dataestado", data)
                 startActivity(intent)
-                Toast.makeText(this, "Te recomendamos realizar una actividad de salud", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Te sientes triste :( recomendamos realizar esta actividad", Toast.LENGTH_SHORT).show()
             }else if(suma >5 && suma  <=10){
-                val intent = Intent(this, PausasActivasActivity::class.java)
+                val intent = Intent(this, eleccionNeutral.random())
                 //intent.putExtra("dataestado", data)
                 startActivity(intent)
-                Toast.makeText(this, "Te recomendamos realizar una pausa activa", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Tu estado es normal te recomendamos realizar una pausa activa", Toast.LENGTH_SHORT).show()
             }else if(suma >10 && suma <=15){
-                val intent = Intent(this, eleccion.random())
+                val intent = Intent(this, eleccionAlegre.random())
                 //val intent = Intent(this, HomeActivity::class.java)
                 //intent.putExtra("c", data)
                 startActivity(intent)
-                Toast.makeText(this, "Te recomendamos ir al inicio jaja", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Tu estado es alegre, te recomendamos realizar la siguiente actividad", Toast.LENGTH_SHORT).show()
             }
         }
 
