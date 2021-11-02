@@ -40,25 +40,35 @@ class EstadoAnimo : AppCompatActivity() {
 
         var barChart: BarChart? = findViewById(R.id.barchart)
         var visitors = ArrayList<BarEntry>()
-        visitors.add(BarEntry(2016f, data))
+/*        visitors.add(BarEntry(2016f, data))
         visitors.add(BarEntry(2015f, data))
         visitors.add(BarEntry(2016f, data))
         visitors.add(BarEntry(2017f, data))
         visitors.add(BarEntry(2018f, data))
         visitors.add(BarEntry(2019f, data))
-        visitors.add(BarEntry(2020f, data))
+        visitors.add(BarEntry(2020f, data))*/
+        val dateTime = Calendar.getInstance().time
+        val dateTimeAsLong = dateTime.time
+        visitors.add(BarEntry(1f, 2f))
+        visitors.add(BarEntry(2f, 5f))
+        visitors.add(BarEntry(3f, 3f))
+        visitors.add(BarEntry(4f, 4f))
+        visitors.add(BarEntry(5f, 5f))
+        visitors.add(BarEntry(6f, 3f))
+        visitors.add(BarEntry(7f, 1f))
 
 
         var barDataSet = BarDataSet(visitors, "visitors")
         barDataSet.setColors(Color.rgb(61, 165, 255), Color.rgb(23, 197, 255));
-        barDataSet.valueTextColor = Color.rgb(61, 165, 255);
+        barDataSet.valueTextColor = Color.rgb(61, 165, 255)
         barDataSet.setValueTextSize(16f);
 
         var barData = BarData(barDataSet)
 
         barChart?.setFitBars(true)
         barChart?.data = barData
-        barChart?.description?.text = "ejemplo de la datta"
+        barChart?.setBackgroundColor(Color.rgb(251, 217, 220))
+        barChart?.description?.text = "Estado de animo"
         barChart?.animateY(2000)
 
     }

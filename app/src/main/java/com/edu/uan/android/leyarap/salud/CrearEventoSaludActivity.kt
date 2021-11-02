@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import com.edu.uan.android.leyarap.R
 import com.edu.uan.android.leyarap.clases.ListaSalud
 import com.edu.uan.android.leyarap.database.AppDatabaseSalud
@@ -18,7 +19,7 @@ class CrearEventoSaludActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_evento_salud)
-
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
         var iditemSalud: Int? = null
 
         if (intent.hasExtra("listaItemSalud")) {

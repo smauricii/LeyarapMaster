@@ -11,6 +11,7 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.activity.result.ActivityResultCallback
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -19,17 +20,22 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
-import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.autenticacionlayout
 import kotlinx.android.synthetic.main.activity_login.btn_google
 import kotlinx.android.synthetic.main.activity_login.editCorreo
 import kotlinx.android.synthetic.main.activity_login.editPassword
+import android.app.Activity
+import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
+
+
+
 
 
 class LoginActicity : AppCompatActivity() {
-    private val GOOGLE_SIGN_IN = 100
+
+    //view binding
+
 
     var texto_arriba: TextView? = null
     var btnregistrarse: ImageButton? = null
@@ -127,7 +133,9 @@ class LoginActicity : AppCompatActivity() {
                     .build()
             val googleClient: GoogleSignInClient = GoogleSignIn.getClient(this, googleConf)
             googleClient.signOut()
-            startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
+            //startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
+            getGoogleDataBack.launch(googleClient.signInIntent)
+
         }
     }
 
@@ -168,39 +176,36 @@ class LoginActicity : AppCompatActivity() {
         startActivity(homeActivityIntent)
 
     }
-    //funcion principal
-    /*private fun mainHome(email: String) {
 
-        val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
-            putExtra("email", email)
-        }
-        startActivity(homeActivityIntent)
+//google
 
-    }*/
+//////////////
+private val getGoogleDataBack=registerForActivityResult(StartActivityForResult()
+) {
 
+    if (it.resultCode == Activity.RESULT_OK) {
 
+        val task = GoogleSignIn.getSignedInAccountFromIntent(it.data)
+        try {
+            val account = task.getResult(ApiException::class.java)
+            if (account != null) {
+                val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+                FirebaseAuth.getInstance().signInWithCredential(credential)
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            mainHome(account.email ?: "")
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == GOOGLE_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                if (account != null) {
-                    val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-                    FirebaseAuth.getInstance().signInWithCredential(credential)
-                        .addOnCompleteListener {
-                            if (it.isSuccessful) {
-                                mainHome(account.email ?: "")
-
-                            } else {
-                                alertaErrorGoogle()
-                            }
+                        } else {
+                            alertaErrorGoogle()
                         }
-                }
-            }catch (e: ApiException){
-                alertaErrorGoogle()
+                    }
             }
+        } catch (e: ApiException) {
+            alertaErrorGoogle()
         }
     }
+}
+    ///////////////Facebook
+
+
 }

@@ -47,7 +47,7 @@ class EleccionActivity : AppCompatActivity() {
             intent.putExtra("email", email)
             startActivity(intent)
         }
-
+//elegir todas las clases finales donde se an a dirigir las actividades
         btn_next.setOnClickListener {
 
             var suma = sliderpreg1.value + sliderpreg2.value + sliderpreg3.value

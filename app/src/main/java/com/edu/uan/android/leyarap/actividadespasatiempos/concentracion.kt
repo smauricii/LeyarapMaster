@@ -1,5 +1,6 @@
 package com.edu.uan.android.leyarap.actividadespasatiempos
 
+import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,7 @@ class concentracion : AppCompatActivity() {
         //temporizador
         var duracion = TimeUnit.MINUTES.toMillis(1)
         txt_temp.typeface = Typeface.createFromAsset(assets, "fonts/moon.otf")
+
 
         val terminacion = "El tiempo ha concluido, si quieres realizar una nueva actividad de concentración pulsar el botón de volmuen en la pantalla"
         var timer = object: CountDownTimer(duracion, 1000) {

@@ -14,6 +14,7 @@
         android:layout_height="338dp"
         android:layout_marginStart="32dp"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

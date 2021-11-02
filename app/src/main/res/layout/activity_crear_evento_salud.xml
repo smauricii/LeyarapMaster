@@ -6,172 +6,71 @@
     android:background="@drawable/fondo"
     tools:context=".salud.CrearEventoSaludActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/txt_crear_evento_salud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/txt_title_crear_evento"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_nombre_evento_salud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/txt_nombre_del_evento"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_crear_evento_salud" />
+
+    <EditText
+        android:id="@+id/edit_nombre_salud"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/edit_redondo_crear_pausa"
+        android:ems="10"
+        android:hint="Nombre del evento"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre_evento_salud" />
+
+    <TextView
+        android:id="@+id/txt_seleccion_salud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/txt_seleccion"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/edit_nombre_salud" />
 
-        <TextView
-            android:id="@+id/txt_crear_evento_salud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/txt_title_crear_evento"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/txt_nombre_evento_salud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:text="@string/txt_nombre_del_evento"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:orientation="vertical"
+    <ImageButton
+        android:id="@+id/btn_crear_salud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:clickable="true"
+        android:contentDescription="crear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/txt_seleccion_salud"
+        app:layout_constraintVertical_bias="0.603"
+        app:srcCompat="@drawable/crear" />
 
-        <EditText
-            android:id="@+id/edit_nombre_salud"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="350dp"
-            android:background="@drawable/edit_redondo_crear_pausa"
-            android:paddingLeft="10dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/txt_seleccion_salud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="230dp"
-            android:text="@string/txt_seleccion"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/btn_lunes1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="center"
-            app:srcCompat="@drawable/lunes" />
-
-        <ImageButton
-            android:id="@+id/btn_martes1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="center"
-            app:srcCompat="@drawable/martes" />
-
-        <ImageButton
-            android:id="@+id/btn_miercoles1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="center"
-            app:srcCompat="@drawable/miercoles" />
-
-        <ImageButton
-            android:id="@+id/btn_jueves1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="center"
-            app:srcCompat="@drawable/jueves" />
-
-        <ImageButton
-            android:id="@+id/btn_viernes1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="center"
-            app:srcCompat="@drawable/viernes" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/btn_sabado1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/sabado" />
-
-        <ImageButton
-            android:id="@+id/btn_domingo1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="100dp"
-            android:layout_weight="1"
-            android:backgroundTint="#00FFFFFF"
-            android:padding="0dp"
-            android:scaleType="fitStart"
-            app:srcCompat="@drawable/domingo" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/btn_crear_salud"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:clickable="true"
-            android:backgroundTint="#00FFFFFF"
-            app:srcCompat="@drawable/crear" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
