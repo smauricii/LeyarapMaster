@@ -3,6 +3,7 @@ package com.edu.uan.android.leyarap.pausas
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.MediaController
 import com.edu.uan.android.leyarap.R
 import kotlinx.android.synthetic.main.activity_diez_pausa.*
@@ -11,6 +12,7 @@ class DiezPausaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diez_pausa)
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
 
         //videoViewCinco.setVideoURI(Uri.parse("android.resource://"+packageName + "/" +R.raw.prueba))

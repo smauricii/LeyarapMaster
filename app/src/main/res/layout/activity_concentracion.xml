@@ -9,16 +9,18 @@
 
     <TextView
         android:id="@+id/textEt2"
-        android:layout_width="343dp"
-        android:layout_height="199dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="350dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="28dp"
+        android:background="#000000"
+        android:backgroundTint="#63000000"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.116" />
 
     <ImageView
         android:id="@+id/speakBtn2"

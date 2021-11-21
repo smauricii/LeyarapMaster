@@ -9,7 +9,8 @@
     <EditText
         android:id="@+id/edit_buscar_salud"
         android:layout_width="350dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/edit_buscar"
         android:drawableEnd="@drawable/ic_buscar"
         android:ems="10"
@@ -17,8 +18,8 @@
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_salud"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,17 +27,22 @@
         android:id="@+id/txt_salud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/txt_salud"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/lista_salud_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_buscar_salud" />
 
     <ListView
         android:id="@+id/lista_salud_layout"
         android:layout_width="match_parent"
         android:layout_height="610dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_salud"
+        app:layout_constraintVertical_bias="1.0">
 
     </ListView>
 
@@ -47,6 +53,7 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="500dp"
         android:clickable="true"
+        android:contentDescription="agregar"
         app:layout_constraintBottom_toBottomOf="@+id/lista_salud_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

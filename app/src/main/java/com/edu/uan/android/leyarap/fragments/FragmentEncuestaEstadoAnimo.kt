@@ -30,7 +30,7 @@ class FragmentEncuestaEstadoAnimo : Fragment() {
             title4.text = "Estado De Animo"
             title4.setTextColor(Color.WHITE)
 
-            parrafo4.text= "Graficamente Podras ver tu estado de animo segun lo has seleccionado a travez de los dias"
+            parrafo4.text= "Graficamente Podras ver tu estado de ánimo segun lo has seleccionado a través de los dias."
             parrafo4.setTextColor(Color.WHITE)
             parrafo4.typeface = Typeface.createFromAsset(context?.assets, "fonts/moon.otf")
         }

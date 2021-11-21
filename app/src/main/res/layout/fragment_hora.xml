@@ -116,7 +116,8 @@
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="vertical"
-        android:textAlignment="center">
+        android:textAlignment="center"
+        tools:ignore="RtlCompat">
 
         <ImageButton
             android:id="@+id/btnContinuar"

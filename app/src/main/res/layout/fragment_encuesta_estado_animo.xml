@@ -23,6 +23,8 @@
         android:id="@+id/parrafo4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#000000"
+        android:backgroundTint="#83000000"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"

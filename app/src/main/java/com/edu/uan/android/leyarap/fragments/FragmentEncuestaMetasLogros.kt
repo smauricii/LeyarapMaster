@@ -30,7 +30,7 @@ class FragmentEncuestaMetasLogros : Fragment() {
             title5.text = "Metas & Logros"
             title5.setTextColor(Color.WHITE)
 
-            parrafo5.text= "Esta herramiente te ayuda a establecer pequeños objetivos para ayudarte a hacer las cosas que son importantes para ti, incluso cuando las emociones se interpongan. No tienes que una montaña hoy (o mañana)Comienza con estos retos, con el tiempo estas actividades se haran mas faciles y te sentiras mejor"
+            parrafo5.text= "Esta herramienta  te ayuda a establecer pequeños objetivos para ayudarte a hacer las cosas que son importantes para ti, incluso cuando las emociones se interpongan. No tienes que una escalar una montaña hoy (o mañana), Comienza con pequeños retos, con el tiempo estas actividades se haran mas faciles y te sentiras mejor"
             parrafo5.setTextColor(Color.WHITE)
             parrafo5.typeface = Typeface.createFromAsset(context?.assets, "fonts/moon.otf")
         }

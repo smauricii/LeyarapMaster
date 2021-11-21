@@ -48,39 +48,48 @@
         android:id="@+id/txt_seleccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        android:backgroundTint="#63000000"
         android:text="@string/txt_seleccion"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="72dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="Selecciona el Dia"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_seleccion" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="60dp"
         android:layout_weight="1"
+        android:background="#000000"
+        android:backgroundTint="#63000000"
         android:gravity="center"
         android:text="Selecciona la hora"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_seleccion" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="56dp"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:backgroundTint="#63000000"
+        android:gravity="center"
+        android:text="Selecciona el Dia"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_seleccion" />
 
     <ImageView
@@ -151,7 +160,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_fecha"
-        app:layout_constraintVertical_bias="0.138"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/crear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

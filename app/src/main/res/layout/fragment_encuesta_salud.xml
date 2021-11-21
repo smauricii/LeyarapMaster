@@ -29,6 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="#000000"
+        android:backgroundTint="#83000000"
         tools:text="DemoText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

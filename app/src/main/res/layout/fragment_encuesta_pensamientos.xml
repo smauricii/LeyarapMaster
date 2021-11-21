@@ -29,6 +29,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title6"
         app:layout_constraintVertical_bias="0.312"
+        android:background="#000000"
+        android:backgroundTint="#83000000"
         tools:text="DemoText" />
 
     <ImageButton

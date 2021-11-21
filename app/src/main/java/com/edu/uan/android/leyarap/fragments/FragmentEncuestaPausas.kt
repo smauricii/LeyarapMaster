@@ -38,7 +38,7 @@ class FragmentEncuestaPausas : Fragment() {
             title1.setTextColor(Color.WHITE)
 
             parrafo1.text =
-                "Breves descansos durante la jornada laboral que sirven para recuperar energia, mejorar el desempeño y eficiencia en el trabajo, y reducir el estrés."
+                "Breves descansos durante la jornada laboral que sirven para recuperar energia, mejorar el desempeño y eficiencia en el trabajo, y reducir el estrés o cargas emocionales."
 
             parrafo1.setTextColor(Color.WHITE)
             parrafo1.typeface = Typeface.createFromAsset(context?.assets, "fonts/moon.otf")
