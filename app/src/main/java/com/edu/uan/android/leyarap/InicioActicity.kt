@@ -13,10 +13,13 @@ import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class InicioActicity : AppCompatActivity(), View.OnClickListener {
+
     var texto_inicio: TextView? = null
     var btnComenzar: ImageButton? = null
     var btnTEngoCn: ImageButton? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
 
